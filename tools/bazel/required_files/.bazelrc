@@ -1,0 +1,5 @@
+ # Import a user bazel config file, if available.
+try-import %workspace%/user.bazelrc
+
+# Import the compilers from the Bazel folder
+import %workspace%/tools/bazel/compilers.bazelrc
