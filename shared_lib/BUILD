@@ -33,8 +33,8 @@ cc_library(
     strip_include_prefix = "//shared_lib",
     defines =
         select({
-            "@bazel_config//:window-clang":["WINDOWS_OS"],
-            "@bazel_config//:linux-clang":["LINUX_OS"],
+            "@compilers//:window-clang":["WINDOWS_OS"],
+            "@compilers//:linux-clang":["LINUX_OS"],
             "//conditions:default": [],
         }),
     visibility = ["//visibility:public"],
