@@ -33,8 +33,8 @@ cc_library(
     strip_include_prefix = "//shared_lib",
     defines =
         select({
-            "@compilers//:window-clang":["WINDOWS_OS"],
-            "@compilers//:linux-clang":["LINUX_OS"],
+            "@platforms//os:windows":["WINDOWS_OS"],
+            "@platforms//os:linux":["LINUX_OS"],
             "//conditions:default": [],
         }),
     visibility = ["//visibility:public"],
